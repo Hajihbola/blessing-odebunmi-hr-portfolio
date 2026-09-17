@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blessing Odebunmi — HR and People Operations Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+ <link rel="icon" type="image/png" href="/images/favicon.png">
+<style>
+  :root{
+    --paper:#F1F3EF; --raise:#E9EDE5; --ink:#17232A; --soft:#4B585D;
+    --line:#CBD1C8; --teal:#2B6E62; --deep:#1D4D45; --ochre:#B8863A; --white:#FCFCFA;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#12181B; --raise:#1A2226; --ink:#E8EDE9; --soft:#9DAAA6;
+      --line:#2C373B; --teal:#6FB3A3; --deep:#8FCBBB; --ochre:#D6A75C; --white:#12181B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#12181B; --raise:#1A2226; --ink:#E8EDE9; --soft:#9DAAA6;
+    --line:#2C373B; --teal:#6FB3A3; --deep:#8FCBBB; --ochre:#D6A75C; --white:#12181B;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0;}
+  a{color:inherit;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 26px;}
+  .topbar{height:8px;background:var(--deep);}
+  .topbar i{display:block;height:8px;width:38%;background:var(--ochre);}
+
+  header.nav{position:sticky;top:0;z-index:20;background:var(--paper);
+    border-bottom:1px solid var(--line);}
+  .nav-in{max-width:900px;margin:0 auto;padding:13px 26px;display:flex;
+    justify-content:space-between;align-items:center;gap:14px;}
+  .nav-name{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;}
+  .nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0;font-size:.88rem;}
+  .nav-links a{text-decoration:none;color:var(--soft);}
+  .nav-links a:hover{color:var(--teal);}
+  @media(max-width:760px){.nav-links{display:none;}}
+
+  .hero{padding:64px 0 46px;border-bottom:1px solid var(--line);}
+  .hero h1{font-size:clamp(2.1rem,6vw,3.1rem);line-height:1.08;color:var(--deep);}
+  .hero .sub{font-size:1.25rem;margin-top:8px;}
+  .kicker{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--teal);
+    margin-top:16px;line-height:1.8;}
+  .contactline{margin-top:22px;font-size:.95rem;color:var(--soft);line-height:1.9;}
+  .contactline a{color:var(--teal);}
+  .tagline{margin-top:24px;font-style:italic;color:var(--soft);max-width:60ch;font-size:1.02rem;}
+  .actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{display:inline-block;padding:11px 20px;border-radius:3px;font-size:.9rem;
+    text-decoration:none;font-weight:500;}
+  .btn-p{background:var(--deep);color:var(--paper);}
+  .btn-o{border:1px solid var(--ink);color:var(--ink);}
+
+  section{padding:46px 0;border-bottom:1px solid var(--line);}
+  .band{background:var(--raise);border-left:3px solid var(--teal);
+    padding:10px 14px;margin-bottom:22px;}
+  .band h2{font-size:1.15rem;color:var(--deep);letter-spacing:.01em;}
+  .band .num{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--soft);
+    margin-right:10px;}
+  h3.sub-h{font-size:1.05rem;color:var(--teal);margin:26px 0 6px;}
+  p{margin:0 0 12px;max-width:70ch;}
+  .soft{color:var(--soft);}
+  .small{font-size:.86rem;color:var(--soft);font-style:italic;}
+
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);margin:18px 0 6px;}
+  .three div{padding:18px 16px;}
+  .three div + div{border-left:1px solid var(--line);}
+  .three h4{font-family:'IBM Plex Mono',monospace;font-size:.76rem;letter-spacing:.06em;
+    margin:0 0 10px;color:var(--teal);}
+  .three p{font-size:.92rem;margin:0;}
+  @media(max-width:700px){.three{grid-template-columns:1fr;}
+    .three div+div{border-left:none;border-top:1px solid var(--line);}}
+
+  ul.clean{list-style:none;margin:0;padding:0;}
+  ul.clean li{padding:8px 0;border-top:1px solid var(--line);font-size:.95rem;}
+  ul.clean li:first-child{border-top:none;}
+  ul.dash{margin:0 0 14px;padding-left:18px;}
+  ul.dash li{margin-bottom:7px;font-size:.95rem;}
+
+  .rows{width:100%;border-collapse:collapse;margin:8px 0 6px;}
+  .rows td{padding:9px 0;border-top:1px solid var(--line);vertical-align:top;font-size:.94rem;}
+  .rows tr:first-child td{border-top:none;}
+  .rows td:first-child{width:36%;padding-right:16px;font-weight:600;}
+  .rows td:last-child{color:var(--soft);}
+  @media(max-width:600px){.rows td{display:block;border-top:none;padding:3px 0;}
+    .rows tr{display:block;border-top:1px solid var(--line);padding:9px 0;}
+    .rows td:first-child{width:auto;}}
+
+  .role{padding:18px 0;border-top:1px solid var(--line);}
+  .role:first-of-type{border-top:none;}
+  .role h3{font-size:1.02rem;}
+  .role .meta{font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:var(--soft);
+    margin:4px 0 10px;}
+  .proof{padding:16px 0;border-top:1px solid var(--line);}
+  .proof:first-of-type{border-top:none;}
+  .proof img{width:100%;display:block;border:1px solid var(--line);border-radius:4px;margin:12px 0 8px;}
+  .proof .toolline{font-size:.82rem;color:var(--teal);font-style:italic;margin-top:2px;}
+
+  .proof h3{font-size:1rem;color:var(--teal);margin-bottom:5px;}
+  .proof p{margin:0 0 6px;font-size:.95rem;}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+  @media(max-width:600px){.two{grid-template-columns:1fr;gap:20px;}}
+  .two h4{font-family:'IBM Plex Mono',monospace;font-size:.76rem;letter-spacing:.05em;
+    color:var(--soft);margin:0 0 10px;font-weight:500;}
+
+  .note{background:var(--raise);padding:14px 16px;border-left:3px solid var(--ochre);
+    font-size:.9rem;color:var(--soft);margin-top:16px;}
+  footer{padding:46px 0 56px;font-size:.86rem;color:var(--soft);}
+  @media print{header.nav{display:none;} body{background:#fff;}}
+</style>
+</head>
+<body>
+<div class="topbar"><i></i></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <span class="nav-name">Blessing Odebunmi</span>
+    <ul class="nav-links">
+      <li><a href="#represent">Represent</a></li>
+      <li><a href="#tech">Technology</a></li>
+      <li><a href="#proof">Proof of Work</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#technical">Technical</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Blessing Odebunmi</h1>
+    <div class="sub">HR and People Operations Portfolio</div>
+    <div class="kicker">HR Manager &nbsp;|&nbsp; Talent Acquisition &nbsp;|&nbsp; People Operations &nbsp;|&nbsp; Performance Management &nbsp;|&nbsp; Learning and Development</div>
+    <div class="contactline">
+      Ibadan, Nigeria<br>
+      +234 706 882 9225<br>
+      <a href="mailto:ajibolablessing3@gmail.com">ajibolablessing3@gmail.com</a><br>
+      <a href="https://linkedin.com/in/blessing-odebunmi-48aa001b3">linkedin.com/in/blessing-odebunmi-48aa001b3</a>
+    </div>
+    <p class="tagline">I build practical HR systems that help organizations hire well, onboard effectively, manage performance, develop people, and keep HR operations organized. My background in frontend development means I can work directly with the technical teams and tools that modern HR depends on.</p>
+    <div class="actions">
+      <a class="btn btn-p" href="#impact">See measured impact</a>
+      <a class="btn btn-o" href="mailto:ajibolablessing3@gmail.com">Get in touch</a>
+    </div>
+  </div>
+
+  <section id="represent">
+    <div class="band"><h2><span class="num">01</span>What I Represent</h2></div>
+    <p class="soft">Three things sit at the centre of how I work.</p>
+    <div class="three">
+      <div><h4>PEOPLE</h4><p>Structured employee experiences across recruitment, onboarding, performance, development, and day to day employee support. The goal is that no one has to guess what happens next.</p></div>
+      <div><h4>PROCESS</h4><p>Clear workflows, documentation, and ownership that make HR consistent and traceable. A process only works if the people using it understand it without being walked through.</p></div>
+      <div><h4>PERFORMANCE</h4><p>KPIs, feedback, and reporting that connect individual contributions to business objectives, so performance conversations rest on evidence rather than impression.</p></div>
+    </div>
+
+    <h3 class="sub-h">How I add value</h3>
+    <ul class="dash">
+      <li><strong>Systems.</strong> I use HRIS, ATS, and digital tools to improve visibility and reduce manual work, and I can configure and troubleshoot them rather than waiting on IT.</li>
+      <li><strong>Business support.</strong> I translate people data into practical management decisions, not just reports that get filed.</li>
+      <li><strong>Confidentiality.</strong> I handle employee information, performance matters, and HR records with discretion. Every sample in this portfolio was built specifically for it, using fictional data.</li>
+    </ul>
+
+    <h3 class="sub-h">Core HR capabilities</h3>
+    <ul class="clean">
+      <li>Talent Acquisition and Onboarding</li>
+      <li>HR Operations and Administration</li>
+      <li>Performance Management</li>
+      <li>Employee Relations</li>
+      <li>Learning and Development</li>
+      <li>HR Policy and Compliance</li>
+      <li>Workforce Planning</li>
+      <li>HRIS Administration</li>
+    </ul>
+  </section>
+
+  <section id="tech">
+    <div class="band"><h2><span class="num">02</span>HR Technology</h2></div>
+    <table class="rows">
+      <tr><td>Applicant Tracking Systems</td><td>Zoho Recruit, Greenhouse.</td></tr>
+      <tr><td>HRIS and HR Platforms</td><td>BambooHR, Monday.com, Zoho</td></tr>
+      <tr><td>Data and Reporting</td><td>Microsoft Excel, Google Sheets, KPI dashboards, performance reporting, HR data and records management</td></tr>
+      <tr><td>Collaboration and Workflow</td><td>Google Workspace, Microsoft Office, Microsoft Teams, Slack, Trello, ClickUp</td></tr>
+      <tr><td>Development and Technical</td><td>JavaScript, TypeScript, React.js, Next.js, HTML, CSS, REST API integration, Git and GitHub, Agile and Scrum</td></tr>
+    </table>
+    <div class="note">A note on this section: I list tools at the level I can actually be questioned on. Where my experience is working familiarity rather than daily administration, I have said so.</div>
+  </section>
+
+  <section id="proof">
+    <div class="band"><h2><span class="num">03</span>Proof of Work</h2></div>
+    <p class="soft">Every item below is a sample built for this portfolio using fictional names, figures, and records. No employer or client data appears anywhere in this document.</p>
+
+    <div class="proof">
+      <h3>Onboarding Workflow and Checklist</h3>
+      <p>A structured 30 day onboarding sequence covering pre start documentation, day one setup, first week orientation, 30 day check in, and manager sign off. Built to remove guesswork from a new hire's first month and give managers a single reference point.</p>
+      <img src="images/sample-onboarding-tracker.jpg" alt="Sample onboarding tracker">
+      <p class="small">Sample shows: task owner, due date, completion status, and document attachment per stage.</p>
+      <p class="toolline">Built and tracked using tools including ClickUp, Trello, and Google Workspace.</p>
+    </div>
+    <div class="proof">
+      <h3>KPI Performance Tracker</h3>
+      <p>A quarterly dashboard monitoring team KPIs, attendance, project delivery, and reporting turnaround. Designed so management can see status at a glance and drill into any metric that is off track.</p>
+      <img src="images/sample-kpi-performance-dashboard.jpg" alt="Sample KPI performance dashboard">
+      <p class="small">Sample shows: metric, owner, target, actual, progress bar, and status flag across eight tracked measures.</p>
+      <p class="toolline">Built using Microsoft Excel and Google Sheets, sourced from HRIS and reporting exports.</p>
+    </div>
+    <div class="proof">
+      <h3>Remote Task and Follow Up System</h3>
+      <p>A board based system for assigning work, tracking deadlines, and following up across distributed teams. Used to keep accountability visible without daily check in meetings.</p>
+      <img src="images/sample-remote-task-follow-up-board.jpg" alt="Sample remote task follow-up board">
+      <p class="small">Sample shows: intake column, in progress, blocked, and completed, with owner and due date on each card.</p>
+      <p class="toolline">Built in Trello, with follow-up coordinated through Slack and Microsoft Teams.</p>
+    </div>
+    <div class="proof">
+      <h3>HR Documentation and Records Structure</h3>
+      <p>A digital filing architecture for employee records, policy documents, and operational information. Folder logic is built around retrieval speed and access control rather than chronology.</p>
+      <img src="images/sample-hr-records-folder-structure.jpg" alt="Sample HR records folder structure">
+      <p class="small">Sample shows: top level structure, naming convention, and access tier per folder.</p>
+      <p class="toolline">Structured in Google Workspace (Drive), with access tiers mirrored in the HRIS.</p>
+    </div>
+    <div class="proof">
+      <h3>Training and Knowledge Sharing Program</h3>
+      <p>A weekly internal learning session format covering career development, workplace readiness, and life skills, with rotating staff ownership of each topic.</p>
+      <img src="images/sample-training-and-knowledge-sharing-planner.jpg" alt="Sample training and knowledge sharing planner">
+      <p class="small">Sample shows: session plan, purpose statement, activity structure, and facilitator rotation.</p>
+      <p class="toolline">Planned in Google Workspace, with session materials designed in Canva.</p>
+    </div>
+    <div class="proof">
+      <h3>Performance Review and PIP Template</h3>
+      <p>An appraisal form and performance improvement plan structure covering objectives, evidence, rating, development actions, and review dates.</p>
+      <img src="images/sample-performance-review-and-pip-template.jpg" alt="Sample performance review and PIP template">
+      <p class="small">Sample shows: blank template plus one completed fictional example.</p>
+      <p class="toolline">Modeled on HRIS review workflows used in BambooHR and Zoho.</p>
+    </div>
+  </section>
+
+  <section id="impact">
+    <div class="band"><h2><span class="num">04</span>Selected Impact</h2></div>
+
+    <div class="role">
+      <h3>Vergold Nigeria Ltd</h3>
+      <div class="meta">Human Resources Manager &nbsp;·&nbsp; January 2025 to Present &nbsp;·&nbsp; Ibadan, Nigeria</div>
+      <ul class="dash">
+        <li>Designed and implemented end to end recruitment, onboarding, workforce planning, and HR records systems using HRIS tools, improving team output by 40 percent and maintaining documentation accuracy in line with the role's 90 percent KPI target.</li>
+        <li>Led performance management cycles including appraisals, PIPs, disciplinary documentation, and employee relations, reducing unresolved escalations by 10 percent.</li>
+        <li>Built and delivered internal learning and development programs that increased staff engagement and performance by 15 percent.</li>
+        <li>Served as the primary HR function lead reporting directly to the CEO.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>AGSERVE and METRICS, a subsidiary of Vergold Nigeria Ltd</h3>
+      <div class="meta">Monitoring and Evaluation Officer &nbsp;·&nbsp; January 2025 to December 2025 &nbsp;·&nbsp; Ibadan, Nigeria</div>
+      <ul class="dash">
+        <li>Developed KPI dashboards used by management to track staff and project performance, improving planning efficiency by 40 percent.</li>
+        <li>Designed digital performance and reporting systems that reduced data errors and delays by 40 percent.</li>
+        <li>Trained teams on Google based reporting tools, achieving 100 percent on time data submission.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>M365Connect</h3>
+      <div class="meta">Operations and Administrative Support &nbsp;·&nbsp; February 2025 to June 2025 &nbsp;·&nbsp; Remote</div>
+      <ul class="dash">
+        <li>Coordinated workflows across HR, IT, and executive teams, reducing delays and improving delivery speed by 25 percent.</li>
+        <li>Managed schedules, documentation, and reporting using Google Workspace and Trello, improving task visibility and follow through.</li>
+        <li>Supported cross team communication structures, improving collaboration efficiency by 20 percent.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>Skillup Vergold Digital Hub</h3>
+      <div class="meta">Technical Support Officer and Tutor, HSE Officer &nbsp;·&nbsp; October 2023 to December 2024 &nbsp;·&nbsp; Ibadan, Nigeria</div>
+      <ul class="dash">
+        <li>Delivered structured digital and professional training to 200 plus participants, achieving a 98 percent completion rate.</li>
+        <li>Supported HR and IT systems used for attendance, reporting, and performance tracking, improving data accuracy by 30 percent.</li>
+        <li>Led HSE compliance and orientation programs, reducing workplace safety incidents by 20 percent.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>Blessing Rentals and Events World</h3>
+      <div class="meta">Event Manager and Operations Lead &nbsp;·&nbsp; June 2019 to Present &nbsp;·&nbsp; Nigeria</div>
+      <ul class="dash">
+        <li>Recruited, trained, and supervised 20 plus contract staff across 50 plus events, building repeatable staffing and onboarding processes used across multiple event cycles.</li>
+        <li>Managed budgets, staffing, logistics, and vendor coordination with 100 percent delivery execution.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="technical">
+    <div class="band"><h2><span class="num">05</span>Technical Background</h2></div>
+    <p class="soft">Most HR professionals rely on someone else to translate between people operations and the systems that run them. I do not.</p>
+
+    <div class="role">
+      <h3>Frontend Web Developer Intern</h3>
+      <div class="meta">AFEX &nbsp;·&nbsp; January 2022 to December 2022</div>
+      <ul class="dash">
+        <li>Built reusable React UI components, improving application stability and user experience.</li>
+        <li>Integrated REST APIs to support real time data updates across agro commodity dashboards.</li>
+        <li>Participated in sprint planning, standups, and retrospectives, collaborating with cross functional teams to track deliverables and meet delivery dates.</li>
+      </ul>
+    </div>
+
+    <h3 class="sub-h">Technical stack</h3>
+    <table class="rows">
+      <tr><td>Languages</td><td>JavaScript, TypeScript, HTML, CSS</td></tr>
+      <tr><td>Frameworks and libraries</td><td>React.js, Next.js</td></tr>
+      <tr><td>Practice</td><td>REST API integration, Git and GitHub version control, Figma to build interpretation, Agile and Scrum</td></tr>
+      <tr><td>Certification</td><td>JavaScript Algorithms and Data Structures (freeCodeCamp), Software Development Track (Stutern)</td></tr>
+    </table>
+
+    <h3 class="sub-h">Why this matters for an HR role</h3>
+    <ul class="dash">
+      <li>I can scope and evaluate an HRIS implementation from both sides of the table, understanding what the vendor is actually promising.</li>
+      <li>I build the reporting dashboards I need instead of queuing a request with another team.</li>
+      <li>I can hire and assess frontend and technical candidates with a working understanding of the skills being claimed.</li>
+      <li>I communicate with engineering teams in their terms, which shortens every cycle that involves them.</li>
+    </ul>
+    <p class="small">I am open to frontend development and HR technology roles in addition to HR and People Operations positions.</p>
+  </section>
+
+  <section id="credentials">
+    <div class="band"><h2><span class="num">06</span>Credentials</h2></div>
+
+    <h3 class="sub-h">Education</h3>
+    <p><strong>B.Sc., Human Physiology</strong><br>
+    <span class="small">University of Ilorin, Nigeria · 2015 to 2019</span></p>
+    <p class="soft">Foundation in biological systems, data analysis, research methodology, and scientific documentation, applied across HR operations, health and safety compliance, and evidence based decision making.</p>
+
+    <h3 class="sub-h">Certifications</h3>
+    <table class="rows">
+      <tr><td>Professional in Human Resources, International (PHRi)</td><td>HR Certification Institute, in progress</td></tr>
+      <tr><td>Human Resources Management</td><td>Alpha Consulting Services, 2020</td></tr>
+      <tr><td>Project Management Professional</td><td>Digital Exchange Academy, 2023</td></tr>
+      <tr><td>Virtual Assistant Professional</td><td>Digital Exchange Academy, 2024</td></tr>
+      <tr><td>Health, Safety and Environmental Management, Levels 1 to 3</td><td>RMCI UK, 2020</td></tr>
+      <tr><td>JavaScript Algorithms and Data Structures</td><td>freeCodeCamp, 2022</td></tr>
+      <tr><td>Software Development Track</td><td>Stutern, 2023</td></tr>
+      <tr><td>IELTS</td><td>British Council, 2024</td></tr>
+    </table>
+
+    <div class="two" style="margin-top:26px;">
+      <div>
+        <h4>MEMBERSHIPS</h4>
+        <ul class="clean">
+          <li>Nigerian Red Cross Society</li>
+          <li>Resources Management Certification Institute (RMCI) UK</li>
+        </ul>
+      </div>
+      <div>
+        <h4>LANGUAGES</h4>
+        <ul class="clean">
+          <li>English, native or bilingual proficiency</li>
+          <li>Yoruba, professional working proficiency</li>
+          <li>German, elementary proficiency</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="border-bottom:none;">
+    <div class="band"><h2><span class="num">07</span>Working With Me</h2></div>
+
+    <h3 class="sub-h">What I am looking for</h3>
+    <p>HR Manager, People Operations Manager, HR Coordinator, HR Systems Analyst, Talent Acquisition Manager, and Frontend Developer roles.</p>
+
+    <h3 class="sub-h">Availability</h3>
+    <p>Remote, hybrid, or onsite. Based in Ibadan, Nigeria, and available for roles locally and internationally.</p>
+
+    <h3 class="sub-h">How I work</h3>
+    <p>I take ownership of the function rather than waiting for direction, which is how I have operated at Vergold as the sole HR lead reporting to the CEO. I document as I go, so anything I build can be handed over and kept running by someone else. I would rather raise a problem early than manage around it quietly.</p>
+
+    <h3 class="sub-h">Contact</h3>
+    <table class="rows">
+      <tr><td>Email</td><td><a href="mailto:ajibolablessing3@gmail.com">ajibolablessing3@gmail.com</a></td></tr>
+      <tr><td>Phone</td><td>+234 706 882 9225</td></tr>
+      <tr><td>LinkedIn</td><td><a href="https://linkedin.com/in/blessing-odebunmi-48aa001b3">linkedin.com/in/blessing-odebunmi-48aa001b3</a></td></tr>
+      <tr><td>Location</td><td>Ibadan, Nigeria</td></tr>
+    </table>
+    <p class="small" style="margin-top:14px;">References available on request.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">Blessing Odebunmi · HR and People Operations Portfolio</div>
+</footer>
+</body>
+</html>
